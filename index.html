@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Kata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <div class="info-panel">
+            <div id="question-counter">Soal 1/105</div>
+            <div id="health-container"></div>
+        </div>
+        
+        <header>
+            <h1>Tebak Kata</h1>
+        </header>
+
+        <main id="main-game">
+            <div id="clue-container">Memuat petunjuk...</div>
+            <div id="input-container"></div>
+            <div id="message-container"></div>
+        </main>
+        
+        <div class="game-over">
+            <h2>GAME OVER</h2>
+            <p>Anda kehabisan nyawa!</p>
+            <button onclick="location.reload()">Coba Lagi</button>
+        </div>
+
+        <div class="game-win">
+            <h2>SELAMAT!</h2>
+            <p>Anda telah menyelesaikan semua soal!</p>
+            <button onclick="location.reload()">Main Lagi</button>
+        </div>
+
+        <footer>Made by M. Bima Ar Rozaq</footer>
+    </div>
+
+    <script src="game.js" defer></script>
+</body>
+</html>

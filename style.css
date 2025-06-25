@@ -1,0 +1,158 @@
+/* CSS untuk Tampilan Game */
+body {
+    background-color: #333;
+    color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.game-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.info-panel {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#question-counter {
+    color: #ffc107;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+#health-container {
+    font-size: 1.5rem;
+}
+
+#health-container span {
+    display: inline-block;
+    margin: 0 0.1rem;
+    transition: transform 0.2s ease;
+}
+
+#clue-container {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 8rem 0 2rem;
+    min-height: 50px;
+}
+
+#input-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+}
+
+#input-container input {
+    --size: 2.8rem;
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
+    background: transparent;
+    border: 2px solid #555;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#input-container input:focus {
+    border-color: #ffc107;
+    transform: scale(1.1);
+}
+
+.correct {
+    background-color: #28a745;
+    border-color: #28a745 !important;
+    transform: scale(1.1);
+}
+
+.wrong-position {
+    background-color: #fd7e14;
+    border-color: #fd7e14 !important;
+}
+
+.wrong {
+    background-color: #dc3545;
+    border-color: #dc3545 !important;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+#message-container {
+    font-size: 1.2rem;
+    min-height: 30px;
+    margin-top: 2rem;
+    font-weight: bold;
+    transition: opacity 0.5s;
+}
+
+.game-over, .game-win {
+    display: none; /* Hidden by default */
+    font-size: 2rem;
+    color: #ffc107;
+}
+
+.game-over h2 {
+    color: #dc3545;
+}
+
+.game-win h2 {
+    color: #28a745;
+}
+
+button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+footer {
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
